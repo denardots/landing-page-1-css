@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plantilla básica de landing page">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1 class="header__title">Bienvenido a Website</h1>
+      <p class="header__subtitle">Creamos el mejor sitio web para ti</p>
+      <a href="#contact" class="header__link">Contáctanos</a>
+      <div class="wave">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+          <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: var(--primary-color);"></path>
+        </svg>
+      </div>
+    </header>
+
+    <!-- Información -->
+    <section class="info info--top container-width">
+      <img src="images/ilustracion.svg" alt="Imagen de información" class="info__img">
+      <article class="info__container">
+        <h2 class="section-title">Titulo de Sección</h2>
+        <p class="info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique impedit sequi velit amet, culpa ipsam voluptas voluptates. Cupiditate illum hic, sequi totam, eaque error quod, praesentium nesciunt velit delectus ipsa.</p>
+        <a href="#" class="info-button">Obtener mas información</a>
+      </article>
+    </section>
+
+    <!-- Mensaje -->
+    <aside class="message">
+      <div class="message__container container-width">
+        <h2 class="section-title">Juntos podemos apoyar</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem cumque molestiae adipisci eligendi aut rem, distinctio voluptas quae quidem, laudantium sed quaerat dicta enim beatae?</p>
+      </div>
+    </aside>
+
+    <!-- Servicios -->
+    <main class="services container-width">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="services__container">
+        <article class="services__card">
+          <img src="images/icons/clone.svg" alt="Ícono del servicio" class="services__card__icon" loading="lazy">
+          <h3 class="services__card__title">Servicio 1</h3>
+          <p class="services__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores.</p>
+          <a href="#" class="info-button">Obtener mas información</a>
+        </article>
+        <article class="services__card">
+          <img src="images/icons/database.svg" alt="Ícono del servicio" class="services__card__icon" loading="lazy">
+          <h3 class="services__card__title">Servicio 2</h3>
+          <p class="services__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores.</p>
+          <a href="#" class="info-button">Obtener mas información</a>
+        </article>
+        <article class="services__card">
+          <img src="images/icons/object.group.svg" alt="Ícono del servicio" class="services__card__icon" loading="lazy">
+          <h3 class="services__card__title">Servicio 3</h3>
+          <p class="services__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores.</p>
+          <a href="#" class="info-button">Obtener mas información</a>
+        </article>
+      </div>
+    </main>
+
+    <!-- Galería -->
+    <section class="gallery container-width">
+      <h3 class="gallery__title section-title">Nuestros Trabajos</h3>
+      <div class="gallery__container">
+        <img src="images/uno.webp" alt="Proyecto 1" class="gallery__img" loading="lazy">
+        <img src="images/dos.webp" alt="Proyecto 2" class="gallery__img" loading="lazy">
+        <img src="images/tres.webp" alt="Proyecto 3" class="gallery__img" loading="lazy">
+        <img src="images/cuatro.webp" alt="Proyecto 4" class="gallery__img" loading="lazy">
+        <img src="images/cinco.webp" alt="Proyecto 5" class="gallery__img" loading="lazy">
+        <img src="images/seis.webp" alt="Proyecto 6" class="gallery__img" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Información -->
+    <section class="info info--bottom container-width">
+      <article class="info__container">
+        <h2 class="section-title">Titulo de Sección</h2>
+        <p class="info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique impedit sequi velit amet, culpa ipsam voluptas voluptates. Cupiditate illum hic, sequi totam, eaque error quod, praesentium nesciunt velit delectus ipsa.</p>
+        <a href="#" class="info-button">Obtener mas información</a>
+      </article>
+      <img src="images/ilustracion1.svg" alt="Imagen de información" class="info__img" loading="lazy">
+    </section>
+
+    <!-- Ola -->
+    <div class="wave-top">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f5576c;"></path>
+      </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <h3 id="contact" class="section-title">Contáctanos</h3>
+      <form action="#" class="footer__form container-width">
+        <input type="text" class="footer__form__input" placeholder="Nombre">
+        <input type="email" class="footer__form__input" placeholder="Email">
+        <textarea class="footer__form__input footer__form__input--textarea" placeholder="Mensaje"></textarea>
+        <input type="submit" value="Enviar" class="footer__form__button">
+      </form>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,356 @@
+/* Fuentes y Variables */
+@font-face {
+  font-family: 'Raleway';
+  src:
+    local("Raleway"),
+    url("../fonts/raleway-400.woff2") format("woff2"),
+    url("../fonts/raleway-400.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Raleway';
+  src:
+    local("Raleway"),
+    url("../fonts/raleway-300.woff2") format("woff2"),
+    url("../fonts/raleway-300.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Raleway';
+  src:
+    local("Raleway"),
+    url("../fonts/raleway-700.woff2") format("woff2"),
+    url("../fonts/raleway-700.woff") format("woff");
+  font-weight: 700;
+}
+:root {
+  --font-size: 16px;
+  --primary-color: #fff;
+  --secondary-color: #f5576c;
+}
+
+/* Estilos Generales */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60vh 40vh repeat(3, auto) 40vh 150px auto;
+  grid-template-areas: 
+    "header"
+    "info-top"
+    "message"
+    "services"
+    "gallery"
+    "info-bottom"
+    "wave"
+    "footer";
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--font-size);
+}
+a {
+  text-decoration: none
+}
+textarea {
+  resize: none;
+}
+
+/* Estilos Reutilizables */
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  margin-bottom: -1px;
+}
+.container-width {
+  width: clamp(300px, 90%, 1250px);
+  margin: auto;
+}
+.section-title {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.info-button {
+  padding: 0.8rem 1rem;
+  color: var(--primary-color);
+  background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 0.5rem;
+}
+
+/* Efectos Reutilizables */
+.info-button:hover {
+  background: linear-gradient(45deg, #f5888c 0%, #f1bcad 100%);
+}
+
+/* Estilos de header */
+.header {
+  position: relative;
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: var(--primary-color);
+  background: 
+    linear-gradient(120deg, #f093fbb2 0%, #551b23b0 100%), 
+    url(../images/header.webp) 
+    no-repeat center / cover fixed;
+}
+.header__title {
+  font-size: 4rem;
+}
+.header__subtitle {
+  font-size: 2rem;
+}
+.header__link {
+  padding: 0.9rem 1.2rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  background-color: #a18cd1;
+  border-radius: 1rem;
+  transition-duration: 0.2s;
+}
+
+/* Efectos de Header */
+.header__link:hover {
+  background-color: #856ac5;
+  box-shadow: 0 0 5px 2px var(--primary-color);
+}
+
+/* Estilos de Información */
+.info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-top: -1rem;
+}
+.info__img {
+  height: 35vh;
+}
+.info__text {
+  margin: 2rem 0;
+}
+.info--top {
+  grid-area: info-top;
+}
+.info--bottom {
+  grid-area: info-bottom;
+}
+
+/* Estilos de Mensaje */
+.message {
+  grid-area: message;
+  padding: 4rem 0;
+  background-color: var(--secondary-color);
+}
+.message__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  color: var(--primary-color);
+}
+
+/* Estilos de Servicios */
+.services {
+  grid-area: services;
+  text-align: center;
+  padding: 6rem 0;
+}
+.services__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.services__card {
+  flex-basis: 300px;
+  height: 20rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+.services__card__icon {
+  height: 3.5rem;
+}
+.services__card__title {
+  margin: 1rem ;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.services__card__text {
+  margin-bottom: 2.5rem;
+}
+
+/* Efectos de Servicios */
+.services__card:hover {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* Estilos de Galería */
+.gallery {
+  grid-area: gallery;
+  margin-bottom: 8rem;
+  padding: 5rem 0;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.gallery__title {
+  margin-bottom: 3rem;
+}
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%; 
+}
+.gallery__img {
+  width: 30%;
+  margin-bottom: 2rem;
+}
+
+/* Efectos de Galería */
+.gallery__img:hover {
+  cursor: pointer;
+}
+
+/* Estilos de Ola */
+.wave-top {
+  grid-area: wave;
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+/* Estilos de Footer */
+.footer {
+  grid-area: footer;
+  background-color: var(--secondary-color);
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+.footer__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.footer__form__input, .footer__form__button {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+}
+.footer__form__input {
+  width: 49%;
+  margin-bottom: 2rem;
+  padding: 0.8rem 1rem;
+  outline: none;
+}
+.footer__form__input--textarea {
+  width: 100%;
+  height: 12rem;
+}
+.footer__form__input::placeholder {
+  color: var(--primary-color);
+}
+.footer__form__button {
+  padding: 0.8rem 2rem;
+  text-align: center;
+}
+
+/* Efectos de Footer */
+.footer__form__button:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Estilos en Tablet L */
+@media (width <=820px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .header {
+    gap: 1.5rem;
+  }
+  .header__title {
+    font-size: 3rem;
+  }
+  .header__subtitle {
+    font-size: 1.5rem;
+  }
+  .header__link {
+    font-size: 1rem;
+  }
+  .info {
+    margin-top: 1rem;
+    gap: 3rem;
+  }
+  .info__img {
+    height: 25vh;
+  }
+  .info__text {
+    margin: 1.5rem 0;
+  }
+  .message {
+    text-align: center;
+  }
+  .footer {
+    padding: 0;
+  }
+}
+
+/* Estilos en Tablet S */
+@media (width <=639px) {
+  body {
+    grid-template-rows: 70vh repeat(5, auto) 150px auto;
+  }
+  .header {
+    text-align: center;
+  }
+  .info, .gallery {
+    margin-bottom: 5rem;
+  }
+  .info {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .info__img {
+    height: calc(30vh-150px);
+  }
+  .gallery {
+    padding: 3rem 0;
+  }
+  .gallery__img {
+    width: 45%;
+  }
+}
+
+/* Estilos en Celular */
+@media (width <=479px) {
+  .header__subtitle {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .gallery__img {
+    width: 90%;
+  }
+  .footer__form__input {
+    width: 100%;
+  }
+  .footer__form__button {
+    margin: auto;
+  }
+}
