@@ -1,10 +1,18 @@
 /* Fuentes y Variables */
+/* Se recomienda trabajar con fuentes que se encuentren guardadas en nuestro proyecto para optimizar el rendimiento */
+/* Para esto utilizamos la regla @font-face, en caso utilizemos fuentes estáticas, se agregará una regla por cada estilo y/o espesor de la fuente */
 @font-face {
+  /* Se recomienda colocar el nombre de la fuente */
   font-family: 'Raleway';
+  /* La propiedad src es obligatoria para acceder a la fuente alamcenada en el proyecto */
   src:
+    /* Como primer valor se recomienda colocar local + nombre de la fuente. Esto debido a que si el usuario tiene una la fuente instalada en su sistema, ya no descargará la fuente de nuestro proyecto */
     local("Raleway"),
+    /* Si la fuente no se encuentra instalada en el sistema del usuario, se descargará la fuente del proyecto mediante: la url + ubicación de la fuente en el proyecto + format + extensión de la fuente */
+    /* OJO: Se recomienda trabajar con fuentes de tipo woff y woff2 */
     url("../fonts/raleway-400.woff2") format("woff2"),
     url("../fonts/raleway-400.woff") format("woff");
+  /* Se recomienda colocar el espesor de la fuente agregada */
   font-weight: 400;
 }
 @font-face {
@@ -36,6 +44,7 @@ html {
 body {
   display: grid;
   grid-template-columns: 1fr;
+  /* El valor auto en las filas de un grid significa que la fila tomará como tamaño el valor de su contenido */
   grid-template-rows: 60vh 40vh repeat(3, auto) 40vh 150px auto;
   grid-template-areas: 
     "header"
@@ -65,6 +74,7 @@ textarea {
   margin-bottom: -1px;
 }
 .container-width {
+  /* La función clamp nos permite agregar distintos valores a una misma propiedad. Para esto utlizamos clamp + valor mínimo + valor recomendado + valor máximo */
   width: clamp(300px, 90%, 1250px);
   margin: auto;
 }
